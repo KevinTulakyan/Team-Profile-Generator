@@ -1,5 +1,5 @@
 const { TestScheduler } = require('jest')
-const Employee = require('../lib/Employee');
+const Employee = require('../lib/Intern');
 
 
 test('Employee object', () =>{
@@ -27,4 +27,3 @@ test('Email', () =>{
 
     expect(employee.email).toEqual(expect.any(String));
 });
-
