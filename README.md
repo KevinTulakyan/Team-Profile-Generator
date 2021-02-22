@@ -3,7 +3,8 @@
 - Used HTML, CSS and JavaScript, Bootstrap, Node
 - Index.HTML is located in the dist/ folder, the one from the demo.
 
-Video used : https://drive.google.com/file/d/1dw-g3nSZHNvMKCtjgpFRasqtjgP7fpL5/view
+## Video Demo
+https://drive.google.com/file/d/1dw-g3nSZHNvMKCtjgpFRasqtjgP7fpL5/view
 
 Demo Page : https://kevintulakyan.github.io/Team-Profile-Generator/dist/index.html
 
