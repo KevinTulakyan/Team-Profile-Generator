@@ -5,7 +5,7 @@
 
 Video used : https://drive.google.com/file/d/1dw-g3nSZHNvMKCtjgpFRasqtjgP7fpL5/view
 
-Demo Page : file:///C:/Users/Kevin/Desktop/school/Team-Profile-Generator/dist/index.html
+Demo Page : https://kevintulakyan.github.io/Team-Profile-Generator/dist/index.html
 
 # Usage
 - User inputs infromation when prompted
