@@ -23,7 +23,7 @@ function start() {
             message: "Enter Manager's id number:"
         },
         {
-            type: 'number',
+            type: 'text',
             name: 'officeNum',
             message: "Enter Manager's office number:"
         }
@@ -33,7 +33,7 @@ function start() {
         const email = data.email
         const id = data.id
         const officeNum = data.officeNum
-        const member = new Manager(name,email,id,officeNum)
+        const member = new Manager(name,id,email,officeNum)
         members.push(member)
         addMembers();
     });
@@ -144,36 +144,36 @@ function compileTeam() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Team</title>
+    <title>Team View</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
-        <span class="navbar-brand mb-0 h1 w-100 text-center fs-1 !important" style="font-size: 36px">My Team</span>
+        <span class="navbar-brand mb-0 h1 w-100 text-center fs-1 !important" style="font-size: 36px">My Members</span>
     </nav>
     <br/>
     <div class="row justify-content-around" style="grid-row-gap: 20px">
     `
     htmlArray.push(htmlBeginning);
 
-    for (let i = 0; i < team.length; i++) {
+    for (let i = 0; i < members.length; i++) {
         let object = `
         <div class="col-4 d-flex justify-content-center">
             <div class="card" style="width: 40rem;">
                 <div class="card-header bg-primary text-white fs-3 fw-bold">
                     <h4 class="bg-primary text-white fs-3 fw-bold text-center">
-                        ${team[i].name}
+                        ${members[i].name}
                     </h4>
                     <h6>
-                        ${team[i].getRole()} <span> ` 
+                        ${members[i].getRole()} <span> ` 
                         
-        if(team[i].getRole() === "Manager") {
+        if(members[i].getRole() === "Manager") {
             object += `
             <i class="fas fa-crown"></i> </span>
             `
-        } else if(team[i].getRole() === "Engineer") {
+        } else if(members[i].getRole() === "Engineer") {
             object += `
             <i class="fas fa-tools"></i> </span>
             `
@@ -188,23 +188,23 @@ function compileTeam() {
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID Number: ${team[i].id}</li>
-                        <li class="list-group-item">Email: <a href="mailto:${team[i].email}">${team[i].email}</a></li>
+                        <li class="list-group-item">ID Number: ${members[i].id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${members[i].email}">${members[i].email}</a></li>
         
         `
-        if (team[i].officeNumber) {
+        if (members[i].officeNum) {
             object += `
-                        <li class="list-group-item">Office Number: ${team[i].officeNumber}</li>
+                        <li class="list-group-item">Office Number: ${members[i].officeNum}</li>
             `
         }
-        if (team[i].github) {
+        if (members[i].github) {
             object += `
-                        <li class="list-group-item">GitHub: <a href="https://github.com/${team[i].github}">${team[i].github}</a></li>
+                        <li class="list-group-item">GitHub: <a href="https://github.com/${members[i].github}">${members[i].github}</a></li>
             `
         }
-        if (team[i].school) {
+        if (members[i].school) {
             object += `
-                        <li class="list-group-item">Current School: ${team[i].school}</li>
+                        <li class="list-group-item">Current School: ${members[i].school}</li>
             `
         }
         object += `
