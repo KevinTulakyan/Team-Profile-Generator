@@ -6,7 +6,7 @@
 ## Video Demo
 https://drive.google.com/file/d/1dw-g3nSZHNvMKCtjgpFRasqtjgP7fpL5/view
 
-## Demo Page made form demo 
+## Demo Page made form demo video
 https://kevintulakyan.github.io/Team-Profile-Generator/dist/index.html
 
 # Usage
