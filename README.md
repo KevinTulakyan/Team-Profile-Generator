@@ -6,7 +6,8 @@
 ## Video Demo
 https://drive.google.com/file/d/1dw-g3nSZHNvMKCtjgpFRasqtjgP7fpL5/view
 
-Demo Page : https://kevintulakyan.github.io/Team-Profile-Generator/dist/index.html
+## Demo Page made form demo 
+https://kevintulakyan.github.io/Team-Profile-Generator/dist/index.html
 
 # Usage
 - User inputs infromation when prompted
